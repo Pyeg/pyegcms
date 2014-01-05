@@ -48,7 +48,7 @@ TIME_ZONE = 'Europe/Berlin'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
-SITE_ID = 3
+SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -196,12 +196,13 @@ LANGUAGES = [
 
 
 INSTALLED_APPS = (
-    'djangocms_text_tinymce',
+    #'djangocms_text_tinymce',
     'cms',
     'mptt',
     'menus',
     'south',
     'sekizai',
+    
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -210,7 +211,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
+    
     'cms.plugins.file',
+    'cms.plugins.text',
     'cms.plugins.flash',
     'cms.plugins.googlemap',
     'cms.plugins.link',
@@ -255,3 +258,8 @@ LOGGING = {
         },
     }
 }
+
+try:
+    from local_settings import *
+except ImportError:
+    pass

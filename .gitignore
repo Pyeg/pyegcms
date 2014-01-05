@@ -34,3 +34,7 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# PyEgCMS ignores
+djangocms.sqlite3
+pyegcms/local_settings.py
