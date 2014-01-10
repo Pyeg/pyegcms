@@ -10,6 +10,12 @@ wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | pyth
 
 
 VirtualEnv:
+A virtual environment is a way to run python scripts and installation seperated from a global system. 
+This is often useful for seperate projects and that libraries won't affect global installations. 
+
+More information:
+http://www.virtualenv.org/en/latest/
+
 
 (as root) pip install virtualenv
 
@@ -40,14 +46,21 @@ in your environment as user:
 python setup.py install
 
 
-Mysql as database was chosed, 
-database name. username and pass is: djangocms
+Mysql as database was choosen.
+To be chosen can be MariaDB or MySQL. 
+Mariadb is a powerfull fork of MySQL with full transactions engines. 
 
-after creating the datatabase with user and pass enter the pyegcms directory and execute:
+More about is:
+https://mariadb.com/kb/en/mariadb-documentation/
+
+database name, username and password is: "djangocms"
+
+after creating the datatabase with user and pass enter your virtual environment, change to the pyegcms directory and execute:
 
 python manage.py syncdb
 python manage.py migrate
 
+djangocms will create the necessary tables with contents.
 
 after successfully finishing the migration, start the server with:
 
