@@ -1,0 +1,55 @@
+General:
+The content managment system is based on a Djangoproject called "django-cms"
+To setup the environment, setuptools and virtualenv must be installed on your system. 
+
+Mostly "setuptools" is already installed on your linux system or look in your repository to check out. 
+
+In case that "setuptools" is not available for your distro, install it manually (as root):
+
+wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | python
+
+
+VirtualEnv:
+
+(as root) pip install virtualenv
+
+(as user)
+choose a directory where you want a seperate python environenment to be set up.
+
+To set up "django-cms" follow this guide:
+
+Installing django-cms:
+http://docs.django-cms.org/en/2.4.3/getting_started/installation.html
+
+
+Additional (MUST) inside the environment:
+pip install mysql-python
+pip install pillow
+
+
+django-tinymce:
+
+Django Tinymce must be installed manually, and doesn't work through pip. 
+
+download, and unzip in /tmp:
+
+https://github.com/aljosa/django-tinymce/archive/master.zip
+
+in your environment as user:
+
+python setup.py install
+
+
+Mysql as database was chosed, 
+database name. username and pass is: djangocms
+
+after creating the datatabase with user and pass enter the pyegcms directory and execute:
+
+python manage.py syncdb
+python manage.py migrate
+
+
+after successfully finishing the migration, start the server with:
+
+python manage.py runserver
+
