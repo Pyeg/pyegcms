@@ -64,7 +64,7 @@ in your environment as user:
 python setup.py install
 
 
-Mysql as database was choosen.
+Database Setup:
 To be chosen can be MariaDB or MySQL. 
 Mariadb is a powerfull fork of MySQL with full transactions engines. 
 
@@ -73,7 +73,17 @@ https://mariadb.com/kb/en/mariadb-documentation/
 
 database name, username and password is: "djangocms"
 
-after creating the datatabase with user and pass enter your virtual environment, change to the pyegcms directory and execute:
+mysql -u root -p (your mysql root password you choose before)
+
+CREATE DATABASE pyegcms
+CREATE USER 'pyegcms'@'localhost' IDENTIFIED BY 'pyegcms';
+GRANT ALL PRIVILEGES ON pyegcms.* TO 'pyegcms'@'localhost'
+
+CREATE USER 'pyegcms'@'%' IDENTIFIED BY 'pyegcms';
+GRANT ALL PRIVILEGES ON pyegcms.* TO 'pyegcms'@'%'
+
+
+Setting up tables for django-cms:
 
 python manage.py syncdb
 python manage.py migrate
