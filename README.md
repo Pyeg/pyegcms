@@ -26,8 +26,3 @@ We are tech-passionate Egyptian developers and engineers, we love Python and we 
 
 
 
-## Notes:
-
-1. Registeration to this community is for those who live in Egypt ONLY.
-2. Not living in Egypt? no problem you have "Read-only" access right :smile:.
-
