@@ -76,6 +76,10 @@ database name, username and password is: "djangocms"
 mysql -u root -p (your mysql root password you choose before)
 
 CREATE DATABASE pyegcms
+
+CREATE USER 'pyegcms'@'127.0.0.1' IDENTIFIED BY 'pyegcms';
+GRANT ALL PRIVILEGES ON pyegcms.* TO 'pyegcms'@'127.0.0.1'
+
 CREATE USER 'pyegcms'@'localhost' IDENTIFIED BY 'pyegcms';
 GRANT ALL PRIVILEGES ON pyegcms.* TO 'pyegcms'@'localhost'
 
