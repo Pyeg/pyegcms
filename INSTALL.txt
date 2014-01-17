@@ -97,5 +97,3 @@ djangocms will create the necessary tables with contents.
 after successfully finishing the migration, start the server with:
 
 python manage.py runserver
-
-----
