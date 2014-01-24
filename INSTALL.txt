@@ -1,99 +1,21 @@
-General:
-The content managment system is based on a Djangoproject called "django-cms"
-To setup the environment, setuptools and virtualenv must be installed on your system. 
+# Installation
 
-Mostly "setuptools" is already installed on your linux system or look in your repository to check out. 
+These are the steps that we will follow to install the website.
 
-In case that "setuptools" is not available for your distro, install it manually (as root):
-
-wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | python
-
-
-VirtualEnv:
-A virtual environment is a way to run python scripts and installation seperated from a global system. 
-This is often useful for seperate projects and that libraries won't affect global installations. 
-
-More information:
-http://www.virtualenv.org/en/latest/
-
-
-(as root) pip install virtualenv
-
-
-Creating and entering the environment:
-
-(as user)
-create the environment
-chose a directory where you have user have full read and write access:
-
-/PyENV
-
-change inside and execute: 
-
-
-virtualenv --no-site-package CMSEnv
-
-and execute:
-
-. /PyENV/CMSEnv/bin/activate
-
-to enter the environment
-
-Install the necessary packages:
-
-To set up "django-cms" follow this guide:
-
-Installing django-cms:
-pip install django-cms
-
-Additional (MUST) inside the environment:
-pip install mysql-python
-pip install pillow
-
-
-django-tinymce:
-
-Django Tinymce must be installed manually, and doesn't work through pip (even it was written on github). 
-
-download, and unzip in /tmp:
-
-https://github.com/aljosa/django-tinymce/archive/master.zip
-
-in your environment as user:
-
-python setup.py install
-
-
-Database Setup:
-To be chosen can be MariaDB or MySQL. 
-Mariadb is a powerfull fork of MySQL with full transactions engines. 
-
-More about is:
-https://mariadb.com/kb/en/mariadb-documentation/
-
-database name, username and password is: "djangocms"
-
-mysql -u root -p (your mysql root password you choose before)
-
-CREATE DATABASE pyegcms
-
-CREATE USER 'pyegcms'@'127.0.0.1' IDENTIFIED BY 'pyegcms';
-GRANT ALL PRIVILEGES ON pyegcms.* TO 'pyegcms'@'127.0.0.1'
-
-CREATE USER 'pyegcms'@'localhost' IDENTIFIED BY 'pyegcms';
-GRANT ALL PRIVILEGES ON pyegcms.* TO 'pyegcms'@'localhost'
-
-CREATE USER 'pyegcms'@'%' IDENTIFIED BY 'pyegcms';
-GRANT ALL PRIVILEGES ON pyegcms.* TO 'pyegcms'@'%'
-
-
-Setting up tables for django-cms:
-
+1. Download & install [Pillow](https://pypi.python.org/pypi/Pillow/2.3.0). Choose the version compatible with your operating system & Python version, e.g. if you are running Python 2.7 on Windows, choose `Pillow-2.3.0.win32-py2.7.exe`.
+2. Download & install pip by following [these installation instructions](http://www.pip-installer.org/en/latest/installing.html).
+3. For development purposes, you can use sqlite as your database. To do this, rename `local_settings.py.template` to be `local_settings.py`.
+4. Run the following command to install all the required libraries.
+```sh
+pip install -r requirements.txt
+```
+5. Run the following commands to create the database. You will be asked to create a superuser for the website.
+```sh
 python manage.py syncdb
 python manage.py migrate
-
-djangocms will create the necessary tables with contents.
-
-after successfully finishing the migration, start the server with:
-
+```
+6. To run the server on port 8000, run this command
+```sh
 python manage.py runserver
+```
+7. You will see a welcome screen when you [open the website](http://localhost:8000/en/) & a link to add your first page. Login to the [admin](http://localhost:8000/en/admin/) with the username & password you entered in step 5.

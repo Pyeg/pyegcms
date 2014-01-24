@@ -38,3 +38,4 @@ nosetests.xml
 # PyEgCMS ignores
 djangocms.sqlite3
 pyegcms/local_settings.py
+pyegcms-venv
