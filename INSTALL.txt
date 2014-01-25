@@ -1,10 +1,15 @@
 # Installation
-
 These are the steps that we will follow to install the website.
 
-1. Download & install [Pillow](https://pypi.python.org/pypi/Pillow/2.3.0). Choose the version compatible with your operating system & Python version, e.g. if you are running Python 2.7 on Windows, choose `Pillow-2.3.0.win32-py2.7.exe`.
-2. Download & install pip by following [these installation instructions](http://www.pip-installer.org/en/latest/installing.html).
-3. For development purposes, you can use sqlite as your database. To do this, rename `local_settings.py.template` to be `local_settings.py`.
+1. Download & install [Pillow](https://pypi.python.org/pypi/Pillow/2.3.0). Choose the version compatible 
+with your operating system & Python version, e.g. if you are running Python 2.7 on Windows, choose `Pillow-2.3.0.win32-py2.7.exe`.
+
+2. Download & install pip by following these installation instructions
+(http://www.pip-installer.org/en/latest/installing.html).
+
+3. For development purposes, you can use sqlite as your database. 
+To do this, rename `local_settings.py.template` to be `local_settings.py`.
+
 4. Run the following command to install all the required libraries.
 ```sh
 pip install -r requirements.txt
@@ -19,3 +24,17 @@ python manage.py migrate
 python manage.py runserver
 ```
 7. You will see a welcome screen when you [open the website](http://localhost:8000/en/) & a link to add your first page. Login to the [admin](http://localhost:8000/en/admin/) with the username & password you entered in step 5.
+
+Want to start developing !! ?
+1. Ok ... Go fork pyegcms to your github profile.
+2. Clone it to your local machine
+	git clone <url>
+3. Configure your email and username.
+ 	git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+
+4. Fetch the "develop" branch.
+	git fetch origin
+5. Aaand Da daa !! your now on the right way to make great contribution. 
+
+Happy development.
