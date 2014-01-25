@@ -12,7 +12,7 @@ We are tech-passionate Egyptian developers and engineers, we love Python and we 
 ### PyegCMS features:
 
 
-**Learning Python:** there are free books who are available online, which we will link in.
+**Learning Python:** there are free books which are available online, which we will link in.
 
 
 
