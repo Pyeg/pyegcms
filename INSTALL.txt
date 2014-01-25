@@ -35,6 +35,6 @@ Want to start developing !! ?
 
 4. Fetch the "develop" branch.
 	git fetch origin
-5. Aaand Da daa !! your now on the right way to make great contribution. 
+5. Aaand Da daa !! you're now on the right way to make great contribution. 
 
 Happy development.
